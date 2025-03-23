@@ -1,0 +1,11 @@
+@use "mixins" as mix;
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @include mix.vp-767 {
+    padding: 0 30px;
+  }
+}
