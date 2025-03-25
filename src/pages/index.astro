@@ -2,18 +2,16 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { Image } from "astro:assets";
 import jsImg from "../images/js.png";
-import Slider from "../components/Slider.astro";
 ---
 
 <BaseLayout title="Home">
   <h1>Title</h1>
   <p class="paragraph">here</p>
-  <svg width="200" height="50">
+  <!-- <svg width="200" height="50">
     <use xlink:href="/images/sprite.svg#icon-header-logo"></use>
   </svg>
   <button class="btn">Here</button>
-  <Image src={jsImg} alt="A bird" />
-  <Slider />
+  <Image src={jsImg} alt="A bird" loading="eager" />
 
-  <div class="margin-bottom"></div>
+  <div class="margin-bottom"></div> -->
 </BaseLayout>

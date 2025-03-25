@@ -1,0 +1,22 @@
+@use "../global/variables" as vars;
+
+.btn {
+  cursor: pointer;
+  &--secondary {
+    background-color: vars.$color-steelblue;
+    color: vars.$color-white;
+    border: none;
+    padding: 6px;
+    min-width: 132px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 27px;
+    transition: transform 0.2s ease-in, background-color 0.2s ease-in;
+
+    &:hover {
+      transform: scale(1.03);
+      background-color: vars.$color-darkslategray;
+    }
+  }
+}

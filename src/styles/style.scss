@@ -11,7 +11,6 @@
 /* Blocks */
 /* ------------------------------------ */
 @use "blocks/_header";
-
-.margin-bottom {
-  margin-bottom: 10rem;
-}
+@use "blocks/_btn";
+@use "blocks/_footer";
+@use "blocks/_socials";

@@ -1,3 +1,292 @@
+@use "../global/variables" as vars;
+@use "../global/mixins" as *;
+
 .header {
-  background-color: red;
+  color: vars.$color-steelblue;
+  background-color: vars.$color-lavender;
+  padding: 20px;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    font-family: vars.$ff-cursive;
+    font-size: 30px;
+    color: vars.$color-steelblue;
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 3px;
+      position: absolute;
+      top: -2px;
+      left: 0;
+      background-color: vars.$color-steelblue;
+    }
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 3px;
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      background-color: vars.$color-steelblue;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    @include vp-1023 {
+      display: none;
+    }
+
+    &-list {
+      display: flex;
+      align-items: center;
+      margin: 0;
+      list-style-type: none;
+      gap: 50px;
+    }
+
+    &-link {
+      color: vars.$color-steelblue;
+      font-size: 16px;
+      line-height: 27px;
+      font-weight: 700;
+      display: inline-flex;
+      position: relative;
+      transition: color 0.3s ease-in;
+
+      &::before {
+        content: "";
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        background-color: vars.$color-darkslategray;
+        transform-origin: left;
+        transform: scaleX(0%);
+        transition: transform 0.3s ease-in, background-color 0.3s ease-in;
+      }
+
+      &:hover {
+        color: vars.$color-darkslategray;
+        &::before {
+          transform: scaleX(100%);
+          background-color: vars.$color-darkslategray;
+        }
+      }
+
+      &--active {
+        &::before {
+          transform: scaleX(100%);
+          background-color: vars.$color-steelblue;
+        }
+      }
+    }
+
+    &-btn {
+      background-color: transparent;
+      border: none;
+      display: inline-flex;
+      gap: 1px;
+      cursor: pointer;
+      align-items: center;
+      color: vars.$color-steelblue;
+      padding: 0;
+      position: relative;
+
+      &-text {
+        color: vars.$color-steelblue;
+        font-size: 16px;
+        line-height: 27px;
+        font-weight: 700;
+        position: relative;
+        transition: color 0.3s ease-in;
+
+        &::before {
+          content: "";
+          width: 100%;
+          height: 3px;
+          position: absolute;
+          left: 0;
+          bottom: -5px;
+          background-color: vars.$color-darkslategray;
+          transform-origin: left;
+          transform: scaleX(0%);
+          transition: transform 0.3s ease-in;
+        }
+
+        &:hover {
+          color: vars.$color-darkslategray;
+          &::before {
+            transform: scaleX(100%);
+            background-color: vars.$color-darkslategray;
+          }
+        }
+
+        &--active {
+          &::before {
+            transform: scaleX(100%);
+            background-color: vars.$color-steelblue;
+          }
+        }
+      }
+
+      &:hover,
+      &:focus-visible {
+        .header__dropdown {
+          opacity: 1;
+          visibility: visible;
+          pointer-events: auto;
+          transform: translate(-50%, 0px);
+          transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+      }
+    }
+    &-icon {
+      flex-shrink: 0;
+    }
+  }
+
+  &__dropdown {
+    position: absolute;
+    padding: 10px;
+    left: 50%;
+    transform: translate(-50%, 20px);
+    opacity: 0;
+    visibility: hidden;
+    list-style-type: none;
+    top: 40px;
+    background-color: vars.$color-white;
+    border-radius: 10px;
+    border: 2px solid vars.$color-steelblue;
+    min-width: 300px;
+    pointer-events: none;
+    flex-direction: column;
+    display: flex;
+    gap: 10px;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0.3s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -20px;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__burger {
+    &-btn {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      transition: transform 0.2s ease-in;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      @include vp-1023 {
+        display: flex;
+      }
+    }
+
+    &-icon {
+      color: vars.$color-steelblue;
+    }
+  }
+
+  &__mobile {
+    &-nav {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      height: 100vh;
+      width: 60%;
+      background-color: vars.$color-steelblue;
+      color: vars.$color-white;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+
+      &--open {
+        transform: translateX(0%);
+      }
+    }
+
+    &-btn {
+      align-items: center;
+      justify-content: center;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      transition: transform 0.2s ease-in;
+      padding: 10px 0 0 10px;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      padding: 100px 10px;
+      list-style-type: none;
+      gap: 15px;
+    }
+
+    &-link {
+      color: vars.$color-white;
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 28px;
+      position: relative;
+
+      &::before {
+        content: "";
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        background-color: vars.$color-white;
+        transform-origin: left;
+        transform: scaleX(0%);
+        transition: transform 0.3s ease-in;
+      }
+
+      &:hover {
+        &::before {
+          transform: scaleX(100%);
+        }
+      }
+
+      &--active {
+        &::before {
+          transform: scaleX(100%);
+        }
+      }
+
+      @include vp-767 {
+        font-size: 20px;
+      }
+    }
+  }
 }
