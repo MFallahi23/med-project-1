@@ -12,5 +12,10 @@
 
   &__icon {
     color: vars.$color-steelblue;
+    transition: color 0.2s ease-in;
+
+    &:hover {
+      color: vars.$color-indianred;
+    }
   }
 }
