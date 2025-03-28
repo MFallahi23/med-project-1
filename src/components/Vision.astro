@@ -1,0 +1,108 @@
+---
+import { Image } from "astro:assets";
+import watermelonImg from "../images/watermelon.png";
+import peachImg from "../images/peach.png";
+import orangeImg from "../images/orange.png";
+import ananasImg from "../images/ananas.png";
+import berriesImg from "../images/berries.png";
+import figImg from "../images/fig.png";
+---
+
+<section class="vision">
+  <div class="container">
+    <div class="vision__wrapper">
+      <h2 class="vision__title">Ma vision de la diététique</h2>
+      <ul class="vision__list">
+        <li class="vision__item">
+          <Image
+            class="vision__img"
+            src={watermelonImg}
+            alt="Icone d'un fruit"
+            width={50}
+            height={50}
+          />
+          <p class="vision__text">
+            Pour moi, la diététique ne signifie pas privation. Manger de tout et
+            se faire plaisir à table est essentiel. Ce qui compte, c’est
+            l’équilibre : la quantité et la fréquence jouent un rôle bien plus
+            important que de classer les aliments en « bons » ou « mauvais ».
+          </p>
+        </li>
+        <li class="vision__item">
+          <Image
+            class="vision__img"
+            src={peachImg}
+            alt="Icone d'un fruit"
+            width={50}
+            height={50}
+          />
+          <p class="vision__text">
+            À moins d’une pathologie spécifique, éliminer des groupes d’aliments
+            ne fait qu’entraîner frustration et restrictions difficiles à tenir
+            sur le long terme. Cela peut même avoir des conséquences sur votre
+            santé.
+          </p>
+        </li>
+        <li class="vision__item">
+          <Image
+            class="vision__img"
+            src={orangeImg}
+            alt="Icone d'un fruit"
+            width={50}
+            height={50}
+          />
+          <p class="vision__text">
+            Faire découvrir une grande variété de saveurs dès le plus jeune âge
+            aide à éduquer le palais. Mais rassurez-vous, il n’est jamais trop
+            tard pour apprendre à apprécier de nouveaux goûts ! Je suis là pour
+            vous partager mes astuces et idées pour y parvenir en douceur.
+          </p>
+        </li>
+        <li class="vision__item">
+          <Image
+            class="vision__img"
+            src={ananasImg}
+            alt="Icone d'un fruit"
+            width={50}
+            height={50}
+          />
+          <p class="vision__text">
+            Être accompagné par un diététicien-nutritionniste, c’est maximiser
+            ses chances de réussir sans abandonner. C’est bénéficier d’une
+            écoute attentive, d’un soutien adapté et d’un accompagnement
+            personnalisé pour surmonter les difficultés. C’est aussi prendre en
+            main sa santé de manière globale.
+          </p>
+        </li>
+        <li class="vision__item">
+          <Image
+            class="vision__img"
+            src={berriesImg}
+            alt="Icone d'un fruit"
+            width={50}
+            height={50}
+          />
+          <p class="vision__text">
+            Le rôle d’un diététicien-nutritionniste n’est pas de juger, mais de
+            vous accompagner avec bienveillance vers vos objectifs.
+          </p>
+        </li>
+        <li class="vision__item">
+          <Image
+            class="vision__img"
+            src={figImg}
+            alt="Icone d'un fruit"
+            width={50}
+            height={50}
+          />
+          <p class="vision__text">
+            Spécialiste de l’alimentation, le diététicien-nutritionniste est là
+            pour vous guider. N’hésitez pas à le consulter pour faire le tri
+            parmi les nombreuses recommandations et adopter une alimentation qui
+            vous convient.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

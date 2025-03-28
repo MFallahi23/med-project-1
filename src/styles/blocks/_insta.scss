@@ -1,0 +1,29 @@
+@use "../global/variables" as vars;
+@use "../global/mixins" as *;
+
+.insta {
+  padding: 48px 0;
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    color: vars.$color-steelblue;
+    gap: 12px;
+
+    &:hover {
+      color: vars.$color-indianred;
+    }
+  }
+
+  &__text {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 35px;
+  }
+}
