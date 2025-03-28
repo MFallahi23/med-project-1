@@ -5,6 +5,11 @@
   color: vars.$color-steelblue;
   background-color: vars.$color-lavender;
   padding: 20px 0;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
 
   &__wrapper {
     display: flex;

@@ -2,7 +2,8 @@
 @use "../global/mixins" as *;
 
 .hero {
-  min-height: calc(100vh - 79px - 48px);
+  padding: 79px 0 0;
+  min-height: calc(100vh - 48px);
 
   &__wrapper {
     display: flex;

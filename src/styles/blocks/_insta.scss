@@ -2,7 +2,7 @@
 @use "../global/mixins" as *;
 
 .insta {
-  padding: 48px 0;
+  padding: 80px 10px;
 
   &__wrapper {
     display: flex;
@@ -22,8 +22,13 @@
   }
 
   &__text {
-    font-size: 24px;
+    font-size: 30px;
     font-weight: 400;
     line-height: 35px;
+
+    @include vp-767 {
+      font-size: 24px;
+      line-height: 26px;
+    }
   }
 }
