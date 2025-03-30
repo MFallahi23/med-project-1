@@ -1,0 +1,40 @@
+---
+import Services from "../components/Services.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Process from "../components/Process.astro";
+import Approach from "../components/Approach.astro";
+import Pricing from "../components/Pricing.astro";
+import Faq from "../components/Faq.astro";
+
+const faqItems = [
+  {
+    question: "Vais-je être pesé lors de la consultation",
+    response:
+      "La pesée et la prise de mensurations ne sont pas obligatoires lors de la consultation. Vous êtes libre de les réaliser chez vous ou chez votre médecin si nécessaire. Pour assurer un suivi précis, je vous fournirai une fiche conseil avec les bonnes pratiques à suivre. Au cabinet, la pesée est uniquement réalisée sur demande, notamment pour celles et ceux qui n'ont pas de balance à domicile et souhaitent un suivi de leur poids.",
+  },
+  {
+    question: "Comment se passe un bilan diététique en ligne ?",
+    response: `Que votre consultation ait lieu en cabinet ou en visio, le déroulement reste identique. L’objectif est de mieux vous connaître : faire le point sur votre santé, vos habitudes alimentaires, votre mode de vie, vos goûts et la raison de votre consultation. À partir de ce bilan, je vous proposerai des conseils diététiques, un plan alimentaire, ainsi que des idées de menus ou de recettes adaptés à vos besoins.
+Pour une consultation en visio, il suffit de disposer d’une bonne connexion internet et de vous installer dans un endroit calme où vous vous sentirez à l’aise. Il est également recommandé d’avoir à portée de main vos dernières analyses sanguines et la liste de vos traitements ou compléments alimentaires.
+Les consultations en ligne suivent la même fréquence que celles en cabinet, avec l’avantage de vous éviter les déplacements et de s’adapter plus facilement à votre emploi du temps. Elles sont particulièrement pratiques si vous avez des contraintes de mobilité ou un emploi du temps chargé. C’est pourquoi je réserve des créneaux spécifiques pour ces rendez-vous.
+Cependant, pour les consultations pédiatriques, je privilégie un échange en cabinet afin d’établir une relation de confiance avec votre enfant et de mieux l’accompagner dans son parcours alimentaire.`,
+  },
+  {
+    question: "Combien de temps dure un suivi diététique ?",
+    response: `La durée du suivi diététique s’adapte à chacun. Au départ, les consultations sont généralement espacées d’environ trois semaines, puis la fréquence s’ajuste selon vos besoins et votre progression. L’objectif est de vous accompagner jusqu’à ce que vous vous sentiez autonome et en confiance avec vos nouvelles habitudes alimentaires. En tant que diététicien, mon rôle est de vous guider de manière personnalisée, en tenant compte de votre rythme et de vos attentes.
+Le cabinet est également conçu pour accueillir les mamans avec leurs enfants. Un espace avec des jeux et des coloriages est mis à disposition des plus petits, et un coin est prévu pour allaiter ou donner un biberon en toute tranquillité.`,
+  },
+  {
+    question: "Vais-je devoir calculer les calories et peser mes aliments ?",
+    response: `Chaque diététicien nutritionniste a sa propre approche. Pour ma part, mon objectif est de vous donner les clés pour adopter une alimentation équilibrée en toute autonomie, sans dépendre d’un contrôle permanent. Peser systématiquement ses aliments n’aide pas, selon moi, à développer un rapport apaisé à la nourriture. Cela peut être ponctuellement utile pour mieux visualiser les quantités, mais ce n’est ni une solution durable ni une nécessité pour apprendre à bien manger. Mon accompagnement vise avant tout la compréhension et l’écoute de vos besoins pour une alimentation en accord avec votre santé et votre bien-être.`,
+  },
+];
+---
+
+<BaseLayout title="consultation">
+  <Services />
+  <Process />
+  <Approach />
+  <Pricing />
+  <Faq faqItems={faqItems} isImgPresent="true" />
+</BaseLayout>

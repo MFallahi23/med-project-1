@@ -1,0 +1,60 @@
+---
+import { Image } from "astro:assets";
+import docImg from "../images/docImg.jpg";
+---
+
+<section class="approach">
+  <div class="container">
+    <div class="approach__wrapper">
+      <h2 class="approach__title">Mon approche de la diététique</h2>
+      <div class="approach__content">
+        <div class="approach__text">
+          <p>
+            J'ai choisi de devenir diététicien suite à une reconversion
+            professionnelle. Ce n'est pas par attrait pour les régimes
+            restrictifs que j'ai fait ce choix, bien au contraire. Mon objectif
+            est que chacun et chacune d'entre vous puisse bénéficier d'une
+            alimentation équilibrée, sans exclusion systématique de groupes
+            alimentaires, et entretienne une relation apaisée avec la
+            nourriture.
+          </p>
+          <p>
+            Pour moi, manger équilibré, c’est avant tout comprendre ses besoins,
+            ses envies et le rôle de chaque aliment, puis les adapter à son mode
+            de vie. Sans cette compréhension, il est difficile de maintenir une
+            alimentation durable sur le long terme.
+          </p>
+          <p>
+            Les régimes restrictifs peuvent certes entraîner une perte de poids
+            rapide, mais souvent suivie de l’effet yoyo. Pire encore, ils
+            peuvent avoir des conséquences néfastes sur votre métabolisme et
+            votre santé, nécessitant ensuite du temps pour corriger ces
+            déséquilibres.
+          </p>
+          <p>
+            Je souhaite vous faire oublier cette vision obsolète de la
+            diététique. Avec bienveillance, je vous accompagnerai dans
+            l’atteinte de vos objectifs, en vous offrant le soutien, la
+            motivation et surtout la confiance nécessaire pour vous sentir à
+            l’aise avec votre alimentation.
+          </p>
+        </div>
+        <div class="approach__right">
+          <Image
+            class="approach__img"
+            src={docImg}
+            width={450}
+            height={300}
+            alt="Photo du diététicien Amine El Farissi"
+          />
+          <button class="btn approach__btn"
+            >Prendre RDV
+            <svg class="approach__btn-icon" width="35" height="35">
+              <use xlink:href="images/sprite.svg#icon-arrow-right"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

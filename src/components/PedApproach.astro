@@ -1,0 +1,64 @@
+---
+import { Image } from "astro:assets";
+import docImg from "../images/docImg.jpg";
+---
+
+<section class="approach">
+  <div class="container">
+    <div class="approach__wrapper">
+      <h2 class="approach__title">Mon approche de la diététique pédiatrique</h2>
+      <div class="approach__content">
+        <div class="approach__text">
+          <p>
+            J'ai choisi de devenir diététicien suite à une reconversion
+            professionnelle. Ce n'est pas par attrait pour les régimes
+            restrictifs que j'ai fait ce choix, bien au contraire. Mon objectif
+            est que chacun et chacune d'entre vous puisse bénéficier d'une
+            alimentation équilibrée, sans exclusion systématique de groupes
+            alimentaires, et entretienne une relation apaisée avec la
+            nourriture.
+          </p>
+          <p>
+            En toute logique il est plus facile de prendre les bonnes habitudes
+            tout au long de son enfance que de changer radicalement à l'âge
+            adulte. C'est pourquoi j'ai à coeur d'accompagner les parents dans
+            cette mission délicate que de faire manger les enfants de façon
+            adaptée à leur âge, leurs besoins énergétiques et leurs goûts.
+          </p>
+          <p>
+            Je tiens à préciser que l'on ne met pas un enfant au régime
+            hypocalorique comme on peut parfois le faire pour un adulte : cela
+            nuit à sa santé et c'est inefficace sur le long terme. Je
+            concentrerai mon attention à lui permettre d'adopter les bonnes
+            habitudes pour avoir une alimentation sereine et équilibrée par la
+            suite.
+          </p>
+          <p>
+            Il ne faut donc pas hésitez à consulter un diététicien au moins une
+            fois pour vérifier que ses idées reçues transmises souvent par
+            l'entourage soit adaptées quand on a des doutes. C'est aussi le rôle
+            du diététicien nutritionniste que de prodiguer les conseils même
+            quand il n'y a pas de problème de santé apparent. C'est bien sûr le
+            rôle du diététicien que d'accompagner les parents et les enfants
+            quand il y a des pathologies avérées également.
+          </p>
+        </div>
+        <div class="approach__right">
+          <Image
+            class="approach__img"
+            src={docImg}
+            width={450}
+            height={300}
+            alt="Photo du diététicien Amine El Farissi"
+          />
+          <button class="btn approach__btn"
+            >Prendre RDV
+            <svg class="approach__btn-icon" width="35" height="35">
+              <use xlink:href="images/sprite.svg#icon-arrow-right"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

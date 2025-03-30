@@ -1,0 +1,95 @@
+@use "../global/variables" as vars;
+@use "../global/mixins" as *;
+
+.pricing {
+  margin: 0 0 96px;
+
+  &__title {
+    color: vars.$color-steelblue;
+    font-family: vars.$ff-cursive;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 64px;
+    margin: 0 0 24px;
+    text-align: center;
+
+    @include vp-767 {
+      font-size: 50px;
+      line-height: 44px;
+    }
+
+    @media (max-width: 400px) {
+      font-size: 34px;
+      line-height: 34px;
+    }
+  }
+
+  &__subtitle {
+    text-align: center;
+    color: vars.$color-indianred;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 27px;
+    margin: 0 auto 80px;
+    max-width: 900px;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    @include vp-1023 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__text {
+    grid-column: 2 span;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 0 0 0 30px;
+
+    @include vp-767 {
+      margin: 0;
+    }
+  }
+
+  &__item {
+    color: vars.$color-steelblue;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  &__price {
+    margin: 0;
+  }
+
+  &__postits {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
+
+    @include vp-767 {
+      flex-direction: column;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 26px;
+  }
+}

@@ -1,0 +1,87 @@
+---
+import { Image } from "astro:assets";
+import consultantImg from "../images/consultant.png";
+
+const patientProblems = [
+  "Diversification alimentaire (Classique, DME, Mixte)",
+  "Allergie",
+  "Éducation alimentaire et conseils",
+  "Trouble Alimentaire Pédiatrique (Trouble oralité)",
+  "Carences",
+  "Perte de poids dans le cadre d'un surpoids ou d'une obésité",
+  "Pathologies : diabète, mucoviscidose, ...",
+];
+---
+
+<section class="services">
+  <h1 class="visually-hidden">
+    Informations sur la consultation diététique pédiatrique (pour enfant)
+  </h1>
+  <div class="container">
+    <div class="services__wrapper">
+      <h2 class="services__title">
+        Pourquoi consulter une diététicienne nutritionniste pour mon enfant ?
+      </h2>
+      <p class="services__subtitle">
+        La consultation s'adresse à tous, adulte, personne âgée, enfant,
+        nourrisson. Prendre soin de sa santé et de soi n'a pas d'âge. Une bonne
+        alimentation est un excellent moyen de prévenir l'apparition de
+        pathologies.
+      </p>
+      <div class="services__content">
+        <div class="services__left">
+          <Image
+            class="services__img"
+            src={consultantImg}
+            width={300}
+            height={300}
+            alt="Illustration d'un consultant dnas la prise de rendez-vous chez le diététicien"
+          />
+          <button class="btn services__btn">
+            Prendre RDV
+            <svg class="hero__btn-icon" width="35" height="35">
+              <use xlink:href="images/sprite.svg#icon-arrow-right"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="services__right">
+          <div class="services__text">
+            <p>
+              Lorsque nous devenons parents, nous avons la responsabilité de
+              permettre à notre enfant de grandir de la meilleure façon
+              possible. Parmi les informations que nous allons lui transmettre
+              et lui apprendre pour sa vie future se trouve l'alimentation. Il
+              ne s'agit pas là simplement de comment se tenir à table.
+            </p>
+            <p>
+              Il est essentiel de permettre à l'enfant de découvrir un maximum
+              de goût, tester des plats différents, éveiller et éduquer ses sens
+              aux aliments. Si cela peut être intuitif pour certains parents,
+              d'autres se sentiront perdus et auront besoin d'être accompagnés
+              pour être sûrs de partir sur de bonnes bases. C'est à ce moment là
+              que le diététicien-nutritionniste intervient.
+            </p>
+            <p>
+              Enfin, les informations sur l'alimentation dans les médias sont
+              nombreuses et parfois contradictoires. Mon rôle en tant que
+              diététicienne est de vous faciliter les choses et de vous aider à
+              démêler le vrai du faux.
+            </p>
+            <p>Je vous accompagne pour les problématiques suivantes :</p>
+          </div>
+          <ul class="services__list">
+            {
+              patientProblems.map((problem) => {
+                return (
+                  <li class="services__item">
+                    <p class="services__text">{problem}</p>
+                  </li>
+                );
+              })
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

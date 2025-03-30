@@ -1,0 +1,109 @@
+---
+import { Image } from "astro:assets";
+import watermelonImg from "../images/watermelon.png";
+import peachImg from "../images/peach.png";
+import orangeImg from "../images/orange.png";
+import ananasImg from "../images/ananas.png";
+import berriesImg from "../images/berries.png";
+import figImg from "../images/fig.png";
+---
+
+<section class="process">
+  <div class="container">
+    <div class="process__wrapper">
+      <h2 class="process__title">
+        La consultation diététique pédiatrique ? Oui, mais comment ça se passe ?
+      </h2>
+      <ul class="process__list">
+        <li class="process__item">
+          <Image
+            class="process__img"
+            src={watermelonImg}
+            alt="Icone d'un fruit"
+            width={50}
+            height={50}
+          />
+          <p class="process__text">
+            Une fois le rendez-vous fixé, via téléphone au jour et à l'horaire
+            de votre choix, il ne vous reste plus qu'à venir avec votre plus
+            beau sourire à ma rencontre. Je préfère un rdv au cabinet afin de
+            faire connaissance en réel avec votre enfant.
+          </p>
+          <li class="process__item">
+            <Image
+              class="process__img"
+              src={peachImg}
+              alt="Icone d'un fruit"
+              width={50}
+              height={50}
+            />
+            <p class="process__text">
+              La première consultation est un temps de rencontre, d'échange afin
+              que je fasse connaissance avec vous et votre enfant, son histoire,
+              et les besoins le menant à consulter un diététicien.
+            </p>
+          </li>
+          <li class="process__item">
+            <Image
+              class="process__img"
+              src={orangeImg}
+              alt="Icone d'un fruit"
+              width={50}
+              height={50}
+            />
+            <p class="process__text">
+              La première consultation dure 1 heure, les consultations de suivi
+              durent 1/2 heure. Nous ferons ensemble l'état des lieux de sa
+              santé, on remontera l'histoire de son alimentation et nous
+              regarderons les paramètres sur lesquels on peut jouer pour
+              atteindre les objectifs fixés ensemble.
+            </p>
+          </li>
+          <li class="process__item">
+            <Image
+              class="process__img"
+              src={ananasImg}
+              alt="Icone d'un fruit"
+              width={50}
+              height={50}
+            />
+            <p class="process__text">
+              Je ferai attention aux antécédants médicaux et aux éventuelles
+              pathologies actuelles afin que mes conseils s'adaptent
+              parfaitement à votre enfant.
+            </p>
+          </li>
+          <li class="process__item">
+            <Image
+              class="process__img"
+              src={berriesImg}
+              alt="Icone d'un fruit"
+              width={50}
+              height={50}
+            />
+            <p class="process__text">
+              Le plan alimentaire sera également adapté à son mode de vie, ses
+              horaires, mais aussi au rythme de vie familial afin que toutes les
+              conditions soient réunis pour l'atteinte des objectifs.
+            </p>
+          </li>
+          <li class="process__item">
+            <Image
+              class="process__img"
+              src={figImg}
+              alt="Icone d'un fruit"
+              width={50}
+              height={50}
+            />
+            <p class="process__text">
+              Enfin, le plan alimentaire sera adapté à votre régime (omnivore,
+              végétarien, végétalien, pesco-végétarien, sans lactose, sans
+              gluten, etc.), en respectant vos convictions et vos intolérances
+              alimentaires.
+            </p>
+          </li>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
