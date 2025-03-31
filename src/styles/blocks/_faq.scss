@@ -88,4 +88,10 @@
       display: block;
     }
   }
+
+  &__img {
+    @include vp-767 {
+      display: none;
+    }
+  }
 }
