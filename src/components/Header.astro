@@ -1,5 +1,7 @@
 ---
+const currentPath = Astro.url.pathname;
 
+// You can use `url.pathname` to compare with the href and apply the active class
 ---
 
 <header class="header">
@@ -15,7 +17,10 @@
       <nav class="header__nav">
         <ul class="header__nav-list">
           <li class="header__nav-item">
-            <a class="header__nav-link" href="/med-project-1/">Accueil</a>
+            <a
+              class={`header__nav-link ${currentPath === "/med-project-1/" ? "header__nav-link--active" : ""}`}
+              href="/med-project-1/">Accueil</a
+            >
           </li>
           <li class="header__nav-item">
             <button class="header__nav-btn">
@@ -33,13 +38,14 @@
               </svg>
               <ul class="header__dropdown">
                 <li class="header__dropdown-item">
-                  <a class="header__nav-link" href="/med-project-1/consultation"
-                    >Consultations adulte</a
+                  <a
+                    class={`header__nav-link ${currentPath === "/med-project-1/consultation" ? "header__nav-link--active" : ""}`}
+                    href="/med-project-1/consultation">Consultations adulte</a
                   >
                 </li>
                 <li class="header__dropdown-item">
                   <a
-                    class="header__nav-link"
+                    class={`header__nav-link ${currentPath === "/med-project-1/consultation-pediatrique" ? "header__nav-link--active" : ""}`}
                     href="/med-project-1/consultation-pediatrique"
                     >Consultations pédiatrique</a
                   >
@@ -48,7 +54,9 @@
             </button>
           </li>
           <li class="header__nav-item">
-            <a class="header__nav-link" href="/med-project-1/contact">Contact</a
+            <a
+              class={`header__nav-link ${currentPath === "/med-project-1/contact" ? "header__nav-link--active" : ""}`}
+              href="/med-project-1/contact">Contact</a
             >
           </li>
         </ul>
@@ -69,23 +77,28 @@
         </button>
         <ul class="header__mobile-list">
           <li class="header__mobile-item">
-            <a class="header__mobile-link" href="/med-project-1/">Accueil</a>
-          </li>
-          <li class="header__mobile-item">
-            <a class="header__mobile-link" href="/med-project-1/consultation"
-              >Consultations adulte</a
+            <a
+              class={`header__mobile-link ${currentPath === "/med-project-1/" ? "header__mobile-link--active" : ""}`}
+              href="/med-project-1/">Accueil</a
             >
           </li>
           <li class="header__mobile-item">
             <a
-              class="header__mobile-link"
+              class={`header__mobile-link ${currentPath === "/med-project-1/consultation" ? "header__mobile-link--active" : ""}`}
+              href="/med-project-1/consultation">Consultations adulte</a
+            >
+          </li>
+          <li class="header__mobile-item">
+            <a
+              class={`header__mobile-link ${currentPath === "/med-project-1/consultation-pediatrique" ? "header__mobile-link--active" : ""}`}
               href="/med-project-1/consultation-pediatrique"
               >Consultations pédiatrique</a
             >
           </li>
           <li class="header__mobile-item">
-            <a class="header__mobile-link" href="/med-project-1/contact"
-              >Contact</a
+            <a
+              class={`header__mobile-link ${currentPath === "/med-project-1/contact" ? "header__mobile-link--active" : ""}`}
+              href="/med-project-1/contact">Contact</a
             >
           </li>
         </ul>
@@ -97,5 +110,4 @@
 
 <script>
   import "../scripts/mobileNav.ts";
-  import "../scripts/activeLinks.ts";
 </script>
