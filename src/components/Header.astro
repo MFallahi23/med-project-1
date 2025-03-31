@@ -10,13 +10,13 @@ const currentPath = Astro.url.pathname;
         href="/med-project-1/"
         aria-label="Lien vers la page d'accueil"
       >
-        <span class="header__logo">Amine El Farissi {currentPath}</span>
+        <span class="header__logo">Amine El Farissi </span>
       </a>
       <nav class="header__nav">
         <ul class="header__nav-list">
           <li class="header__nav-item">
             <a
-              class={`header__nav-link ${currentPath === "/med-project-1/" ? "header__nav-link--active" : ""}`}
+              class={`header__nav-link ${currentPath === "/med-project-1" ? "header__nav-link--active" : ""}`}
               href="/med-project-1/">Accueil</a
             >
           </li>
@@ -76,7 +76,7 @@ const currentPath = Astro.url.pathname;
         <ul class="header__mobile-list">
           <li class="header__mobile-item">
             <a
-              class={`header__mobile-link ${currentPath === "/med-project-1/" ? "header__mobile-link--active" : ""}`}
+              class={`header__mobile-link ${currentPath === "/med-project-1" ? "header__mobile-link--active" : ""}`}
               href="/med-project-1/">Accueil</a
             >
           </li>
