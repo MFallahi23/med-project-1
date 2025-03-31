@@ -1,5 +1,102 @@
 ---
+import { Image } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import docImg from "../images/docImg.jpg";
 ---
 
-<BaseLayout> Contact </BaseLayout>
+<BaseLayout title="Contact - Amine El Farissi">
+  <section class="contact">
+    <h1 class="visually-hidden">
+      Page de contact d'Amine El Farissi - Diététicien nutritionniste à
+      Casablanca
+    </h1>
+    <div class="container">
+      <div class="contact__wrapper">
+        <div class="contact__left">
+          <div class="contact__rectangle">
+            <Image
+              class="contact__img"
+              src={docImg}
+              width={256}
+              height={256}
+              alt="Photo d'Amine El Farissi - Diététicien nutritionniste à Casablanca"
+            />
+          </div>
+        </div>
+        <div class="contact__right">
+          <h2 class="contact__title">
+            Une question ? <br />
+            Envoyez-moi un message, je vous recontacte dans les meilleurs délais
+          </h2>
+          <form
+            class="contact__form"
+            id="contact-form"
+            method="POST"
+            action="#"
+          >
+            <div class="contact__form-inner">
+              <h3 class="contact__form-title">Formulaire contact</h3>
+              <div class="custom-input">
+                <label class="custom-input__label" for="firstName"
+                  >Prénom*</label
+                >
+                <input
+                  class="custom-input__field"
+                  type="text"
+                  name="firstName"
+                  id="firstName"
+                />
+              </div>
+              <div class="custom-input">
+                <label class="custom-input__label" for="lastName">Nom*</label>
+                <input
+                  class="custom-input__field"
+                  type="text"
+                  name="lastName"
+                  id="lastName"
+                />
+              </div>
+              <div class="custom-input">
+                <label class="custom-input__label" for="email"
+                  >Adresse mail*</label
+                >
+                <input
+                  class="custom-input__field"
+                  type="email"
+                  name="email"
+                  id="email"
+                />
+              </div>
+              <div class="custom-input">
+                <label class="custom-input__label" for="tel">Téléphone</label>
+                <input
+                  class="custom-input__field"
+                  type="tel"
+                  name="tel"
+                  id="tel"
+                />
+              </div>
+              <div class="custom-textarea">
+                <label class="custom-textarea__label" for="msg">Message</label>
+                <textarea
+                  class="custom-textarea__field"
+                  name="msg"
+                  id="msg"
+                  rows="5"></textarea>
+              </div>
+            </div>
+            <button class="btn contact__btn" type="submit"
+              >Envoyer <svg class="contact__icon" width="35" height="35">
+                <use xlink:href="images/sprite.svg#icon-arrow-right"></use>
+              </svg></button
+            >
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    import "../scripts/contact.ts";
+  </script>
+</BaseLayout>
