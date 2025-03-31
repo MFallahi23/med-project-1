@@ -16,5 +16,3 @@ openBtn?.addEventListener("click", function (e) {
 closeBtn?.addEventListener("click", function (e) {
   mobileNav?.classList.remove("header__mobile-nav--open");
 });
-
-console.log("hello");

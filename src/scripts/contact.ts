@@ -6,12 +6,15 @@ contactForm?.addEventListener("submit", async function (e) {
   const formObj = new FormData(contactForm);
   const patientSubmission = Object.fromEntries(formObj.entries());
 
-  const response = await fetch(import.meta.env.PUBLIC_APP_WEB_URL, {
-    method: "POST",
-    mode: "no-cors",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(patientSubmission),
-  });
+  const response = await fetch(
+    "https://script.google.com/macros/s/AKfycbwi2mz3Rw_PYpggeM9VkNZiSUjIY5ZnmRm0HaKZmH2YK54GY8deoUmYr8RuVF9IH6d0/exec",
+    {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(patientSubmission),
+    }
+  );
 
   alert("Votre message a été envoyé!");
   this.reset();
