@@ -1,7 +1,5 @@
 ---
 const currentPath = Astro.url.pathname;
-
-// You can use `url.pathname` to compare with the href and apply the active class
 ---
 
 <header class="header">
@@ -12,7 +10,7 @@ const currentPath = Astro.url.pathname;
         href="/med-project-1/"
         aria-label="Lien vers la page d'accueil"
       >
-        <span class="header__logo">Amine El Farissi</span>
+        <span class="header__logo">Amine El Farissi {currentPath}</span>
       </a>
       <nav class="header__nav">
         <ul class="header__nav-list">
