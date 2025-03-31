@@ -6,13 +6,14 @@
   justify-content: center;
   align-items: center;
   padding: 50px 0 80px;
+  overflow: hidden;
 
   &__ctn {
     position: relative;
 
     &::after {
       content: "";
-      width: 50vw;
+      width: 500px;
       height: 8px;
       position: absolute;
       right: 0;
@@ -24,9 +25,9 @@
 
     &::before {
       content: "";
-      width: 50vw;
-      height: 8px;
       position: absolute;
+      width: 500px;
+      height: 8px;
       left: -15px;
       top: 50%;
       transform: translatex(-100%);
